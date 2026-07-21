@@ -97,7 +97,7 @@
 
   /* ---------- HERO (CINEMATIC) ---------- */
   .hero{position:relative; min-height:100vh; display:flex; align-items:center; padding:200px 0 90px; overflow:hidden; background:radial-gradient(ellipse at 50% 120%, #26210f 0%, #141310 55%);}
-  .hero-floor{position:absolute; left:-30%; right:-30%; bottom:0; height:66%; background-image:var(--pv-tan); background-size:120px 60px; transform:perspective(520px) rotateX(64deg); transform-origin:bottom center; opacity:.42; animation:floorPan 26s linear infinite; -webkit-mask-image:linear-gradient(to top, #000 22%, transparent 88%); mask-image:linear-gradient(to top, #000 22%, transparent 88%);}
+  .hero-floor{position:absolute; left:-30%; right:-30%; bottom:0; height:42%; background-image:var(--pv-tan); background-size:120px 60px; transform:perspective(520px) rotateX(64deg); transform-origin:bottom center; opacity:.34; animation:floorPan 26s linear infinite; -webkit-mask-image:linear-gradient(to top, #000 10%, transparent 55%); mask-image:linear-gradient(to top, #000 10%, transparent 55%);}
   @keyframes floorPan{from{background-position:0 0;} to{background-position:0 480px;}}
   .hero-horizon{position:absolute; left:0; right:0; bottom:30%; height:42%; background:radial-gradient(ellipse at 50% 100%, rgba(226,192,121,.34), transparent 66%); pointer-events:none;}
   .hero-beam{position:absolute; top:-20%; left:50%; width:60vw; height:150%; transform:translateX(-50%) rotate(8deg); background:linear-gradient(100deg, transparent 42%, rgba(226,192,121,.10) 50%, transparent 58%); animation:beamSweep 9s ease-in-out infinite; pointer-events:none;}
