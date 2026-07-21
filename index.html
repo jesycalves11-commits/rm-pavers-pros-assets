@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>R&M Pavers Pros | Tampa Bay Paver & Hardscape Installation</title>
-<meta name="description" content="R&M Pavers Pros — premium paver driveways, patios, pool decks, retaining walls & artificial turf installation serving Tampa Bay, FL. Free estimates.">
+<meta name="description" content="R&M Pavers Pros: premium paver driveways, patios, pool decks, retaining walls & artificial turf installation serving Tampa Bay, FL. Free estimates.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
   header.scrolled{background:rgba(247,244,238,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); box-shadow:0 4px 20px rgba(30,25,10,.06);}
   .nav-wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 26px; max-width:1200px; margin:0 auto;}
   .logo{display:flex; align-items:center;}
-  .logo img{height:50px; width:auto; display:block;}
+  .logo img{height:60px; width:auto; display:block;}
   nav.main-nav{display:flex; gap:34px;}
   nav.main-nav a{font-size:.92rem; font-weight:500; color:var(--invert); opacity:.9; transition:opacity .2s, color .2s;}
   header.scrolled nav.main-nav a{color:var(--text); opacity:.78;}
@@ -113,7 +113,7 @@
   .hero-trust span{display:inline-flex; align-items:center; gap:7px;}
   .hero-trust svg{width:16px; height:16px; color:var(--gold-bright);}
   .hero-stats{display:flex; gap:44px; flex-wrap:wrap;}
-  .hero-stats .st{display:block; font-family:'Space Grotesk',sans-serif; font-size:2.2rem; color:var(--gold-bright); font-weight:700;}
+  .hero-stats .st{display:block; font-family:'Space Grotesk',sans-serif; font-size:2.2rem; line-height:1; color:var(--gold-bright); font-weight:700;}
   .hero-stats small{font-size:.78rem; color:var(--muted-invert); display:block; margin-top:2px;}
   .hero-video-note{position:relative; z-index:4; margin-top:38px; display:inline-flex; align-items:center; gap:8px; font-size:.72rem; color:var(--muted-invert); border:1px dashed var(--line-dark); border-radius:999px; padding:7px 15px;}
 
@@ -153,7 +153,7 @@
   .gb-stats{position:relative; z-index:2; display:flex; justify-content:center; gap:0; flex-wrap:wrap; background:rgba(20,19,16,.72); backdrop-filter:blur(4px); border:1px solid var(--line-dark); border-radius:20px; padding:34px 16px; margin:0 auto; max-width:980px; box-shadow:0 24px 54px rgba(0,0,0,.45);}
   .gb-stat{flex:1 1 180px; text-align:center; padding:10px 22px; border-right:1px solid var(--line-dark);}
   .gb-stat:last-child{border-right:none;}
-  .gb-stat .st{display:block; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:2.6rem; color:var(--gold-bright);}
+  .gb-stat .st{display:block; font-family:'Space Grotesk',sans-serif; font-weight:700; font-size:2.6rem; line-height:1; color:var(--gold-bright);}
   .gb-stat small{display:block; font-size:.78rem; color:var(--muted-invert); margin-top:6px;}
   @media(max-width:760px){
     .gb-tile{width:118px; height:150px;}
@@ -295,6 +295,17 @@
   form.quote-form .btn{width:100%; margin-top:6px;}
   .form-note{font-size:.72rem; color:var(--muted); text-align:center;}
 
+  /* ---------- FINAL CTA BAND ---------- */
+  .final-cta{position:relative; background:var(--ink); overflow:hidden; padding:100px 0;}
+  .final-cta::before{content:""; position:absolute; top:-30%; right:-8%; width:55%; height:160%; background:radial-gradient(circle at center, rgba(226,192,121,.18), transparent 70%); pointer-events:none;}
+  .final-cta::after{content:""; position:absolute; left:-15%; bottom:-35%; width:55%; height:130%; background-image:var(--pv-tan); background-size:140px 70px; opacity:.07; transform:rotate(-8deg); pointer-events:none;}
+  .final-cta .container{position:relative; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:40px; flex-wrap:wrap;}
+  .final-cta-text .eyebrow{color:var(--gold-bright);}
+  .final-cta-text h2{color:var(--invert); font-size:clamp(1.9rem,3.4vw,2.7rem); font-weight:700; max-width:560px;}
+  .final-cta-text p{color:var(--muted-invert); font-size:1.02rem; margin-top:14px; max-width:520px;}
+  .final-cta-actions{display:flex; gap:16px; flex-wrap:wrap; flex-shrink:0;}
+  @media(max-width:760px){ .final-cta{padding:70px 0; text-align:center;} .final-cta .container{justify-content:center;} .final-cta-actions{justify-content:center;} .final-cta-text .eyebrow{justify-content:center;} }
+
   /* ---------- FOOTER ---------- */
   footer{padding:64px 0 120px; background:var(--ink); color:var(--muted-invert);}
   .footer-grid{display:flex; justify-content:space-between; flex-wrap:wrap; gap:34px; padding-bottom:36px; border-bottom:1px solid var(--line-dark); margin-bottom:26px;}
@@ -342,7 +353,7 @@
 <header id="siteHeader">
   <div class="nav-wrap">
     <a href="#home" class="logo">
-      <img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-mark-web.png" alt="R&amp;M Pavers Pros">
+      <img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-full-web.png" alt="R&amp;M Pavers Pros">
     </a>
     <nav class="main-nav">
       <a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#why">Why Us</a><a href="#testimonials">Reviews</a><a href="#contact">Contact</a>
@@ -375,7 +386,7 @@
       <div class="hero-content">
         <span class="eyebrow reveal">Tampa Bay Paver &amp; Hardscape Specialists</span>
         <h1 class="reveal-mask">Outdoor Spaces <em>Built to Last</em>,<br>Designed to Impress</h1>
-        <p class="lead reveal">R&amp;M Pavers Pros designs and installs premium paver driveways, patios, pool decks, and retaining walls across the Tampa Bay area — built with craftsmanship that holds up for decades.</p>
+        <p class="lead reveal">R&amp;M Pavers Pros designs and installs premium paver driveways, patios, pool decks, and retaining walls across the Tampa Bay area, built with craftsmanship that holds up for decades.</p>
         <div class="hero-ctas reveal">
           <a href="#contact" class="btn btn-gold">Get a Free Estimate</a>
           <a href="#portfolio" class="btn btn-outline">View Our Work</a>
@@ -386,6 +397,7 @@
           <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free On-Site Estimates</span>
         </div>
         <div class="hero-stats stagger">
+          <div><span class="st odo" data-odo="8+"></span><small>Years of Experience</small></div>
           <div><span class="st odo" data-odo="7"></span><small>Core Services</small></div>
           <div><span class="st odo" data-odo="100%"></span><small>Licensed &amp; Insured</small></div>
           <div><span class="st">Tampa</span><small>&amp; Surrounding Areas</small></div>
@@ -453,12 +465,12 @@
       <div class="about-body reveal">
         <span class="eyebrow">About R&amp;M Pavers Pros</span>
         <h2 class="reveal-mask">Tampa Bay's Trusted Hardscape &amp; Paver Team</h2>
-        <p>We're a locally owned hardscaping crew serving Tampa and the surrounding Bay Area, focused on one thing: building outdoor spaces that hold up to Florida weather and look sharp for years. From driveways to full backyard transformations, every project is measured, designed, and installed by our own team — no subcontractor guesswork.</p>
+        <p>We're a locally owned hardscaping crew serving Tampa and the surrounding Bay Area, focused on one thing: building outdoor spaces that hold up to Florida weather and look sharp for years. From driveways to full backyard transformations, every project is measured, designed, and installed by our own team. No subcontractor guesswork.</p>
         <ul class="about-list stagger">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Locally owned &amp; operated in Tampa, FL</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Free, no-pressure on-site estimates</li>
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Licensed, insured &amp; built for Florida climate</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> One crew, start to finish — no handoffs</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> One crew, start to finish, no handoffs</li>
         </ul>
       </div>
     </div>
@@ -476,48 +488,9 @@
         <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M2 12c2 2 4 2 6 0s4-2 6 0 4 2 6 0 4-2 4-2M2 17c2 2 4 2 6 0s4-2 6 0 4 2 6 0 4-2 4-2"/></svg></div><h3>Paver Pool Deck</h3><p>Slip-resistant, heat-reflective paver decking designed to surround your pool safely and beautifully.</p><span class="tap-hint">Tap for details</span></div>
         <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div><h3>Paver Patio</h3><p>Custom patio layouts and patterns that turn your backyard into an everyday living space.</p><span class="tap-hint">Tap for details</span></div>
         <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2c-2 4-6 6-6 11a6 6 0 0012 0c0-5-4-7-6-11z"/></svg></div><h3>Artificial Turf</h3><p>Low-maintenance, always-green synthetic turf for lawns, play areas, and pet spaces.</p><span class="tap-hint">Tap for details</span></div>
-        <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a5 5 0 01-6.7 6.7L5.5 21.5a2 2 0 01-2.8-2.8L12.1 9a5 5 0 016.7-6.7l-3.1 3.1z"/></svg></div><h3>Paver Repair</h3><p>Sunken, cracked, or shifting pavers? We lift, relevel, and reset your existing hardscape — matching the original pattern for a seamless, long-lasting repair.</p><span class="tap-hint">Tap for details</span></div>
+        <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.1-3.1a5 5 0 01-6.7 6.7L5.5 21.5a2 2 0 01-2.8-2.8L12.1 9a5 5 0 016.7-6.7l-3.1 3.1z"/></svg></div><h3>Paver Repair</h3><p>Sunken, cracked, or shifting pavers? We lift, relevel, and reset your existing hardscape, matching the original pattern for a seamless, long-lasting repair.</p><span class="tap-hint">Tap for details</span></div>
         <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="10" width="18" height="4"/><rect x="3" y="14" width="18" height="4"/><rect x="3" y="6" width="18" height="4"/></svg></div><h3>Retaining Wall</h3><p>Structural and decorative retaining walls that manage grade changes and prevent erosion.</p><span class="tap-hint">Tap for details</span></div>
         <div class="service-card" tabindex="0"><div class="icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2s5 5 5 10a5 5 0 01-10 0c0-2 1-3 2-4 .3 1 1 1.5 1.5 1 .8-.8-.5-2-.5-4 0-1.2.8-2.2 2-3z"/></svg></div><h3>Fire Pit &amp; Wall</h3><p>Custom paver fire pits and seating walls, perfect for cool Florida evenings outdoors.</p><span class="tap-hint">Tap for details</span></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="follow" class="follow-section">
-    <div class="container follow-grid">
-      <div class="reveal">
-        <div class="phone-frame">
-          <div class="phone-body"></div>
-          <div class="phone-screen">
-            <div class="ig-grid">
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/driveway-after.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/patio-after.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/pooldeck-after.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/firepit-after.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/wall-after.jpg" alt=""></div>
-              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt=""></div>
-            </div>
-          </div>
-          <img class="phone-frame-img" src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/phone-frame.png" alt="">
-        </div>
-      </div>
-      <div class="follow-body reveal">
-        <span class="eyebrow">Follow Along</span>
-        <h2 class="reveal-mask">See Every Project, As It Happens</h2>
-        <p>We post fresh project photos, before &amp; after transformations, and behind-the-scenes crew shots every week. Follow along to see Tampa Bay backyards transform in real time.</p>
-        <ul class="follow-list stagger">
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> New project photos every week</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Before &amp; after transformations</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Behind-the-scenes with the crew</li>
-          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tag us in your finished project</li>
-        </ul>
-        <a href="https://www.instagram.com/rmpaverspros/" target="_blank" rel="noopener" class="btn btn-gold">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
-          Follow @rmpaverspros
-        </a>
       </div>
     </div>
   </section>
@@ -533,7 +506,7 @@
       <div class="process-grid stagger">
         <div class="process-step"><span class="num">01</span><h3>Request a Free Estimate</h3><p>Call, text, or fill out our form. We'll schedule a free on-site visit to measure and understand your vision.</p></div>
         <div class="process-step"><span class="num">02</span><h3>Design &amp; Schedule</h3><p>We walk you through materials, patterns, and pricing, then lock in a start date that works for you.</p></div>
-        <div class="process-step"><span class="num">03</span><h3>Build &amp; Enjoy</h3><p>Our crew installs your project with clean, efficient work — then you enjoy a space built to last.</p></div>
+        <div class="process-step"><span class="num">03</span><h3>Build &amp; Enjoy</h3><p>Our crew installs your project with clean, efficient work, then you enjoy a space built to last.</p></div>
       </div>
     </div>
   </section>
@@ -621,9 +594,9 @@
       <div class="testi-wrap reveal">
         <div class="testi-track">
           <div class="testi-slides" id="testiSlides">
-            <div class="testi-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Placeholder review text. This carousel is fully working — swap this copy for a real Google or Facebook review once you have one."</p><div class="testi-name">Customer Name (placeholder)</div><div class="testi-role">Tampa, FL</div><span class="testi-placeholder-note">Sample layout — not a real review yet</span></div></div>
-            <div class="testi-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Placeholder review text. Add a short quote about the crew, timeline, and how the finished project turned out."</p><div class="testi-name">Customer Name (placeholder)</div><div class="testi-role">Land O' Lakes, FL</div><span class="testi-placeholder-note">Sample layout — not a real review yet</span></div></div>
-            <div class="testi-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Placeholder review text. Once connected to Google Reviews, real ratings and quotes can pull in here automatically."</p><div class="testi-name">Customer Name (placeholder)</div><div class="testi-role">Wesley Chapel, FL</div><span class="testi-placeholder-note">Sample layout — not a real review yet</span></div></div>
+            <div class="testi-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Placeholder review text. This carousel is fully working, swap this copy for a real Google or Facebook review once you have one."</p><div class="testi-name">Customer Name (placeholder)</div><div class="testi-role">Tampa, FL</div><span class="testi-placeholder-note">Sample layout, not a real review yet</span></div></div>
+            <div class="testi-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Placeholder review text. Add a short quote about the crew, timeline, and how the finished project turned out."</p><div class="testi-name">Customer Name (placeholder)</div><div class="testi-role">Land O' Lakes, FL</div><span class="testi-placeholder-note">Sample layout, not a real review yet</span></div></div>
+            <div class="testi-slide"><div class="testi-card"><div class="testi-stars">★★★★★</div><p class="testi-quote">"Placeholder review text. Once connected to Google Reviews, real ratings and quotes can pull in here automatically."</p><div class="testi-name">Customer Name (placeholder)</div><div class="testi-role">Wesley Chapel, FL</div><span class="testi-placeholder-note">Sample layout, not a real review yet</span></div></div>
           </div>
         </div>
         <div class="testi-nav">
@@ -655,7 +628,7 @@
       <div class="contact-info reveal">
         <span class="eyebrow">Get In Touch</span>
         <h2 class="reveal-mask">Get Your Free Estimate</h2>
-        <p>Tell us about your project and we'll get back to you fast — or reach out directly using any of the options below.</p>
+        <p>Tell us about your project and we'll get back to you fast, or reach out directly using any of the options below.</p>
         <div class="contact-method"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div><div><strong>Call or Text</strong><span><a href="tel:+18137645987">(813) 764-5987</a></span></div></div>
         <div class="contact-method"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l9 6 9-6M5 5h14a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2z"/></svg></div><div><strong>Email</strong><span><a href="mailto:Rmpaverspros@gmail.com">Rmpaverspros@gmail.com</a></span></div></div>
         <div class="contact-method"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 6-9 12-9 12S3 16 3 10a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg></div><div><strong>Service Area</strong><span>Tampa &amp; surrounding Bay Area, FL</span></div></div>
@@ -675,8 +648,61 @@
         </div>
         <div class="field"><label>Project Details</label><textarea name="message" rows="4" placeholder="Tell us a bit about your project..."></textarea></div>
         <button type="submit" class="btn btn-gold">Send My Free Estimate Request</button>
-        <p class="form-note">Submitting opens your email app with the details pre-filled — connect a form service later for silent submissions.</p>
+        <p class="form-note">Submitting opens your email app with the details pre-filled. Connect a form service later for silent submissions.</p>
       </form>
+    </div>
+  </section>
+
+  <section id="follow" class="follow-section">
+    <div class="container follow-grid">
+      <div class="reveal">
+        <div class="phone-frame">
+          <div class="phone-body"></div>
+          <div class="phone-screen">
+            <div class="ig-grid">
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/driveway-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/patio-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/pooldeck-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/firepit-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/wall-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt=""></div>
+            </div>
+          </div>
+          <img class="phone-frame-img" src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/phone-frame.png" alt="">
+        </div>
+      </div>
+      <div class="follow-body reveal">
+        <span class="eyebrow">Follow Along</span>
+        <h2 class="reveal-mask">See Every Project, As It Happens</h2>
+        <p>We post fresh project photos, before &amp; after transformations, and behind-the-scenes crew shots every week. Follow along to see Tampa Bay backyards transform in real time.</p>
+        <ul class="follow-list stagger">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> New project photos every week</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Before &amp; after transformations</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Behind-the-scenes with the crew</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Tag us in your finished project</li>
+        </ul>
+        <a href="https://www.instagram.com/rmpaverspros/" target="_blank" rel="noopener" class="btn btn-gold">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+          Follow @rmpaverspros
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="final-cta dark-zone">
+    <div class="container">
+      <div class="final-cta-text reveal">
+        <span class="eyebrow">Let's Get Started</span>
+        <h2 class="reveal-mask">Ready to Start Your Project? Give Us a Call.</h2>
+        <p>Talk to us directly about your driveway, patio, pool deck, or backyard project. We'll answer your questions and schedule your free on-site estimate right over the phone.</p>
+      </div>
+      <div class="final-cta-actions reveal">
+        <a href="tel:+18137645987" class="btn btn-gold">Call (813) 764-5987</a>
+        <a href="#contact" class="btn btn-outline">Get a Free Estimate</a>
+      </div>
     </div>
   </section>
 
@@ -685,12 +711,12 @@
 <footer class="dark-zone">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-web-280.png" alt="R&amp;M Pavers Pros" style="height:38px; width:auto;"><p>Premium paver &amp; hardscape installation serving Tampa and the surrounding Bay Area.</p></div>
+      <div class="footer-brand"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-web-340.png" alt="R&amp;M Pavers Pros" style="height:72px; width:auto;"><p>Premium paver &amp; hardscape installation serving Tampa and the surrounding Bay Area.</p></div>
       <div class="footer-col"><h5>Company</h5><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a></div>
       <div class="footer-col"><h5>Contact</h5><span>(813) 764-5987</span><span>Rmpaverspros@gmail.com</span><span>Tampa, FL</span></div>
       <div class="footer-col"><h5>Follow</h5><a href="https://www.instagram.com/rmpaverspros/" target="_blank" rel="noopener">Instagram @rmpaverspros</a></div>
     </div>
-    <div class="footer-bottom"><span>&copy; <span id="year"></span> R&amp;M Pavers Pros. All rights reserved.</span><span>Site by Opensquad</span></div>
+    <div class="footer-bottom"><span>&copy; <span id="year"></span> R&amp;M Pavers Pros. All rights reserved.</span><span>Developed by Jéssica Dorneles</span></div>
   </div>
 </footer>
 
@@ -724,7 +750,7 @@
     card.addEventListener('keypress', e => { if(e.key === 'Enter') card.click(); });
   });
 
-  // Scene reveals (sections animate in as they enter — "screen change" feel)
+  // Scene reveals (sections animate in as they enter, "screen change" feel)
   const revealEls = document.querySelectorAll('.reveal, .reveal-mask, .stagger');
   const io = new IntersectionObserver(entries => {
     entries.forEach(e => { if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
@@ -747,7 +773,7 @@
   document.getElementById('quoteForm').addEventListener('submit', function(e){
     e.preventDefault();
     const f = new FormData(this);
-    const subject = encodeURIComponent('Free Estimate Request — ' + f.get('service'));
+    const subject = encodeURIComponent('Free Estimate Request: ' + f.get('service'));
     const body = encodeURIComponent('Name: ' + f.get('name') + '\n' + 'Phone: ' + f.get('phone') + '\n' + 'Email: ' + f.get('email') + '\n' + 'Service: ' + f.get('service') + '\n\n' + 'Details:\n' + f.get('message'));
     window.location.href = 'mailto:Rmpaverspros@gmail.com?subject=' + subject + '&body=' + body;
   });
