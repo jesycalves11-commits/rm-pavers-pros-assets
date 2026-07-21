@@ -1,0 +1,27 @@
+COLOQUE AS FOTOS DOS TRABALHOS NESTA PASTA
+==========================================
+
+Como enviar as fotos pra mim usar no site:
+
+OPÇÃO 1 (mais fácil) — Arraste os arquivos pra dentro desta pasta:
+  /Users/jessicadorneles/Documents/OpenSquad/rm-pavers-pros-site/images/
+  É só soltar as fotos aqui (JPG ou PNG). Depois me avisa no chat
+  ("já coloquei as fotos") e eu leio e encaixo no site.
+
+OPÇÃO 2 — Arraste a foto direto pra dentro do chat do Claude aqui no VSCode
+  (ou cole com Ctrl+V). Eu recebo e salvo.
+
+DICA DE NOMES (ajuda a encaixar no lugar certo, mas não é obrigatório):
+  driveway-1.jpg      (calçada / entrada de garagem)
+  pooldeck-1.jpg      (deck de piscina)
+  patio-1.jpg         (pátio)
+  turf-1.jpg          (grama sintética)
+  retaining-wall-1.jpg (muro de contenção)
+  firepit-1.jpg       (fogueira / parede)
+
+Se tiver foto "ANTES" e "DEPOIS" do mesmo projeto, nomeia assim:
+  patio-1-antes.jpg  e  patio-1-depois.jpg
+  (pro efeito de arrastar a foto que já está no site)
+
+VÍDEO do topo (hero): pode colocar aqui também, nomeado:
+  hero.mp4
