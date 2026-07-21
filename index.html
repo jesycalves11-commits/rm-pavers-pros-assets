@@ -150,9 +150,8 @@
   @keyframes gbScrollLeft{ from{transform:translateX(0) rotateY(4deg);} to{transform:translateX(-50%) rotateY(4deg);} }
   @keyframes gbScrollRight{ from{transform:translateX(-50%) rotateY(-4deg);} to{transform:translateX(0) rotateY(-4deg);} }
   @media (prefers-reduced-motion: reduce){ .gb-track{animation:none;} }
-  .gb-tile{flex:0 0 auto; width:168px; height:210px; border-radius:14px; overflow:hidden; border:1px solid var(--line-dark); position:relative; box-shadow:inset 0 0 40px rgba(0,0,0,.4), 0 10px 24px rgba(0,0,0,.35);}
-  .gb-tile .tex{position:absolute; inset:0; background-size:70px 35px;}
-  .gb-tile .lab{position:absolute; left:0; right:0; bottom:0; padding:20px 12px 12px; font-size:.72rem; font-weight:600; color:#fff; letter-spacing:.4px; background:linear-gradient(to top, rgba(0,0,0,.7), transparent);}
+  .gb-tile{flex:0 0 auto; width:168px; height:210px; border-radius:14px; overflow:hidden; border:1px solid var(--line-dark); position:relative; box-shadow:inset 0 0 40px rgba(0,0,0,.25), 0 10px 24px rgba(0,0,0,.35);}
+  .gb-tile img{width:100%; height:100%; object-fit:cover; display:block;}
   .gb-stats{position:relative; z-index:2; display:flex; justify-content:center; gap:0; flex-wrap:wrap; background:rgba(20,19,16,.72); backdrop-filter:blur(4px); border:1px solid var(--line-dark); border-radius:20px; padding:34px 16px; margin:0 auto; max-width:980px; box-shadow:0 24px 54px rgba(0,0,0,.45);}
   .gb-stat{flex:1 1 180px; text-align:center; padding:10px 22px; border-right:1px solid var(--line-dark);}
   .gb-stat:last-child{border-right:none;}
@@ -178,11 +177,9 @@
 
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid; grid-template-columns:.95fr 1.05fr; gap:64px; align-items:center;}
-  .about-visual{border-radius:var(--radius); aspect-ratio:4/5; border:1px solid var(--line); position:relative; overflow:hidden; box-shadow:var(--shadow);}
-  .about-visual .tex{position:absolute; inset:-8%; background-image:var(--pv-stone); background-size:150px 112px; animation:kb 24s ease-in-out infinite alternate;}
-  @keyframes kb{from{transform:scale(1) translate(0,0);} to{transform:scale(1.14) translate(-3%,-3%);}}
-  .about-visual .cap{position:absolute; bottom:0; left:0; right:0; padding:18px 20px; font-size:.74rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.7), transparent);}
-  @media (prefers-reduced-motion: reduce){ .about-visual .tex{animation:none;} }
+  .about-visual{border-radius:var(--radius); aspect-ratio:4/5; border:1px solid var(--line); position:relative; overflow:hidden; box-shadow:var(--shadow); background:var(--ink);}
+  .about-visual video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .about-visual .cap{position:absolute; bottom:0; left:0; right:0; padding:18px 20px; font-size:.74rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.7), transparent); z-index:2;}
   .about-body h2{font-size:clamp(1.9rem,3.2vw,2.6rem); font-weight:700; margin-bottom:18px;}
   .about-body p{color:var(--muted); font-size:1.04rem;}
   .about-list{list-style:none; margin-top:28px; display:grid; gap:15px;}
@@ -212,7 +209,8 @@
   .ig-handle strong{font-size:.76rem; font-weight:700; color:#1a1813;}
   .ig-handle span{font-size:.62rem; color:#8a8578;}
   .ig-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; padding:0 2px;}
-  .ig-tile{aspect-ratio:1/1; background-size:60px 45px;}
+  .ig-tile{aspect-ratio:1/1; overflow:hidden;}
+  .ig-tile img{width:100%; height:100%; object-fit:cover; display:block;}
   .follow-body h2{font-size:clamp(1.9rem,3.2vw,2.5rem); font-weight:700; margin-bottom:16px;}
   .follow-body>p{color:var(--muted); font-size:1.02rem; max-width:480px;}
   .follow-list{list-style:none; display:grid; gap:13px; margin:28px 0 36px;}
@@ -246,9 +244,8 @@
 
   .ba-media{position:relative; aspect-ratio:4/3; overflow:hidden; user-select:none;}
   .ba-before, .ba-after{position:absolute; inset:0;}
-  .ba-before .tex{position:absolute; inset:0; background-image:var(--concrete); background-size:140px 140px; filter:grayscale(.3) brightness(.82);}
+  .ba-before img, .ba-after img{width:100%; height:100%; object-fit:cover; display:block;}
   .ba-after{clip-path:inset(0 0 0 50%);}
-  .ba-after .tex{position:absolute; inset:0; background-size:64px 32px;}
   .ba-lab{position:absolute; bottom:12px; z-index:3; font-size:.68rem; font-weight:700; letter-spacing:.4px; padding:5px 11px; border-radius:999px; color:#fff; background:rgba(0,0,0,.55); pointer-events:none;}
   .ba-before .ba-lab{left:12px;}
   .ba-after .ba-lab{right:12px; background:rgba(195,155,69,.92); color:#1a1305;}
@@ -351,7 +348,7 @@
 <header id="siteHeader">
   <div class="nav-wrap">
     <a href="#home" class="logo">
-      <img src="images/logo-full-web.png" alt="R&amp;M Pavers Pros">
+      <img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-web-280.png" alt="R&amp;M Pavers Pros">
       <small>Tampa Bay Hardscapes</small>
     </a>
     <nav class="main-nav">
@@ -411,18 +408,14 @@
   <section class="gallery-banner dark-zone" id="gallery-banner">
     <div class="gb-strip">
       <div class="gb-track gb-left" aria-hidden="true">
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-tan)"></div><div class="lab">Herringbone Driveway</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-stone); background-size:100px 75px"></div><div class="lab">Travertine Pool Deck</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-terra)"></div><div class="lab">Brick Patio</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-char)"></div><div class="lab">Charcoal Pavers</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-stone); background-size:100px 75px"></div><div class="lab">Stone Walkway</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-tan)"></div><div class="lab">Paver Patio</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-terra)"></div><div class="lab">Fire Pit Surround</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-char)"></div><div class="lab">Retaining Wall</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-tan)"></div><div class="lab">Herringbone Driveway</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-stone); background-size:100px 75px"></div><div class="lab">Travertine Pool Deck</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-terra)"></div><div class="lab">Brick Patio</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-char)"></div><div class="lab">Charcoal Pavers</div></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick4.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-area1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick4.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-area1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
       </div>
     </div>
 
@@ -435,18 +428,14 @@
 
     <div class="gb-strip">
       <div class="gb-track gb-right" aria-hidden="true">
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-stone); background-size:100px 75px"></div><div class="lab">Stone Walkway</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-terra)"></div><div class="lab">Fire Pit Surround</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-tan)"></div><div class="lab">Paver Patio</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-char)"></div><div class="lab">Retaining Wall</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-tan)"></div><div class="lab">Herringbone Driveway</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-stone); background-size:100px 75px"></div><div class="lab">Travertine Pool Deck</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-terra)"></div><div class="lab">Brick Patio</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-char)"></div><div class="lab">Charcoal Pavers</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-stone); background-size:100px 75px"></div><div class="lab">Stone Walkway</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-terra)"></div><div class="lab">Fire Pit Surround</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-tan)"></div><div class="lab">Paver Patio</div></div>
-        <div class="gb-tile"><div class="tex" style="background-image:var(--pv-char)"></div><div class="lab">Retaining Wall</div></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-patio1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-piscina2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-patio1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-piscina2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
       </div>
     </div>
   </section>
@@ -454,8 +443,9 @@
   <section id="about">
     <div class="container about-grid">
       <div class="about-visual reveal">
-        <div class="tex"></div>
-        <div class="cap">Team / project photo — replace with a real image</div>
+        <video autoplay muted loop playsinline>
+          <source src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/about-video.mp4" type="video/mp4">
+        </video>
       </div>
       <div class="about-body reveal">
         <span class="eyebrow">About R&amp;M Pavers Pros</span>
@@ -501,15 +491,15 @@
               <div class="ig-handle"><strong>rmpaverspros</strong><span>Tampa Bay, FL</span></div>
             </div>
             <div class="ig-grid">
-              <div class="ig-tile" style="background-image:var(--pv-tan)"></div>
-              <div class="ig-tile" style="background-image:var(--pv-stone); background-size:60px 45px"></div>
-              <div class="ig-tile" style="background-image:var(--pv-terra)"></div>
-              <div class="ig-tile" style="background-image:var(--pv-char)"></div>
-              <div class="ig-tile" style="background-image:var(--pv-stone); background-size:60px 45px"></div>
-              <div class="ig-tile" style="background-image:var(--pv-tan)"></div>
-              <div class="ig-tile" style="background-image:var(--pv-terra)"></div>
-              <div class="ig-tile" style="background-image:var(--pv-char)"></div>
-              <div class="ig-tile" style="background-image:var(--pv-tan)"></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/driveway-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/patio-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/pooldeck-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/firepit-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/wall-after.jpg" alt=""></div>
+              <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt=""></div>
             </div>
           </div>
         </div>
@@ -559,52 +549,62 @@
 
         <div class="port-card">
           <div class="ba-media">
-            <div class="ba-before"><div class="tex"></div><span class="ba-lab">Before</span></div>
-            <div class="ba-after"><div class="tex" style="background-image:var(--pv-tan)"></div><span class="ba-lab">After</span></div>
+            <div class="ba-before"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/driveway-before.jpg" alt="Driveway before"><span class="ba-lab">Before</span></div>
+            <div class="ba-after"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/driveway-after.jpg" alt="Driveway after"><span class="ba-lab">After</span></div>
             <div class="ba-handle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
             <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Compare Paver Driveway before and after">
           </div>
-          <div class="port-info"><h4>Paver Driveway</h4><span>Textured preview — swap for a real photo of your project</span></div>
+          <div class="port-info"><h4>Paver Driveway</h4><span>Tampa Bay, FL</span></div>
         </div>
 
         <div class="port-card">
           <div class="ba-media">
-            <div class="ba-before"><div class="tex"></div><span class="ba-lab">Before</span></div>
-            <div class="ba-after"><div class="tex" style="background-image:var(--pv-stone); background-size:90px 67px"></div><span class="ba-lab">After</span></div>
+            <div class="ba-before"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/pooldeck-before.jpg" alt="Pool deck before"><span class="ba-lab">Before</span></div>
+            <div class="ba-after"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/pooldeck-after.jpg" alt="Pool deck after"><span class="ba-lab">After</span></div>
             <div class="ba-handle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
             <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Compare Pool Deck before and after">
           </div>
-          <div class="port-info"><h4>Paver Pool Deck</h4><span>Textured preview — swap for a real photo of your project</span></div>
+          <div class="port-info"><h4>Paver Pool Deck</h4><span>Tampa Bay, FL</span></div>
         </div>
 
         <div class="port-card">
           <div class="ba-media">
-            <div class="ba-before"><div class="tex"></div><span class="ba-lab">Before</span></div>
-            <div class="ba-after"><div class="tex" style="background-image:var(--pv-terra)"></div><span class="ba-lab">After</span></div>
+            <div class="ba-before"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/patio-before.jpg" alt="Patio before"><span class="ba-lab">Before</span></div>
+            <div class="ba-after"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/patio-after.jpg" alt="Patio after"><span class="ba-lab">After</span></div>
             <div class="ba-handle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
             <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Compare Patio before and after">
           </div>
-          <div class="port-info"><h4>Paver Patio</h4><span>Textured preview — swap for a real photo of your project</span></div>
+          <div class="port-info"><h4>Paver Patio</h4><span>Tampa Bay, FL</span></div>
         </div>
 
         <div class="port-card">
           <div class="ba-media">
-            <div class="ba-before"><div class="tex"></div><span class="ba-lab">Before</span></div>
-            <div class="ba-after"><div class="tex" style="background-image:var(--pv-char)"></div><span class="ba-lab">After</span></div>
+            <div class="ba-before"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/repair-before.jpg" alt="Paver repair before"><span class="ba-lab">Before</span></div>
+            <div class="ba-after"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/repair-after.jpg" alt="Paver repair after"><span class="ba-lab">After</span></div>
+            <div class="ba-handle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
+            <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Compare Paver Repair before and after">
+          </div>
+          <div class="port-info"><h4>Paver Repair</h4><span>Tampa Bay, FL</span></div>
+        </div>
+
+        <div class="port-card">
+          <div class="ba-media">
+            <div class="ba-before"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/wall-before.jpg" alt="Retaining wall before"><span class="ba-lab">Before</span></div>
+            <div class="ba-after"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/wall-after.jpg" alt="Retaining wall after"><span class="ba-lab">After</span></div>
             <div class="ba-handle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
             <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Compare Retaining Wall before and after">
           </div>
-          <div class="port-info"><h4>Retaining Wall</h4><span>Textured preview — swap for a real photo of your project</span></div>
+          <div class="port-info"><h4>Retaining Wall</h4><span>Tampa Bay, FL</span></div>
         </div>
 
         <div class="port-card">
           <div class="ba-media">
-            <div class="ba-before"><div class="tex"></div><span class="ba-lab">Before</span></div>
-            <div class="ba-after"><div class="tex" style="background-image:var(--pv-terra)"></div><span class="ba-lab">After</span></div>
+            <div class="ba-before"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/firepit-before.jpg" alt="Fire pit before"><span class="ba-lab">Before</span></div>
+            <div class="ba-after"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/firepit-after.jpg" alt="Fire pit after"><span class="ba-lab">After</span></div>
             <div class="ba-handle"><div class="grip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M8 7l-4 5 4 5M16 7l4 5-4 5"/></svg></div></div>
             <input type="range" class="ba-range" min="0" max="100" value="50" aria-label="Compare Fire Pit before and after">
           </div>
-          <div class="port-info"><h4>Fire Pit &amp; Wall</h4><span>Textured preview — swap for a real photo of your project</span></div>
+          <div class="port-info"><h4>Fire Pit &amp; Wall</h4><span>Tampa Bay, FL</span></div>
         </div>
 
       </div>
@@ -685,7 +685,7 @@
 <footer class="dark-zone">
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-brand"><img src="images/logo-full-web.png" alt="R&amp;M Pavers Pros" style="height:38px; width:auto;"><p>Premium paver &amp; hardscape installation serving Tampa and the surrounding Bay Area.</p></div>
+      <div class="footer-brand"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-web-280.png" alt="R&amp;M Pavers Pros" style="height:38px; width:auto;"><p>Premium paver &amp; hardscape installation serving Tampa and the surrounding Bay Area.</p></div>
       <div class="footer-col"><h5>Company</h5><a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a></div>
       <div class="footer-col"><h5>Contact</h5><span>(813) 764-5987</span><span>Rmpaverspros@gmail.com</span><span>Tampa, FL</span></div>
       <div class="footer-col"><h5>Follow</h5><a href="https://www.instagram.com/rmpaverspros/" target="_blank" rel="noopener">Instagram @rmpaverspros</a></div>
