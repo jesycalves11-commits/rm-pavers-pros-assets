@@ -69,10 +69,8 @@
   header{position:fixed; top:36px; left:0; right:0; z-index:1000; background:transparent; border-bottom:1px solid transparent; transition:background .3s ease, border-color .3s ease, box-shadow .3s ease;}
   header.scrolled{background:rgba(247,244,238,.92); backdrop-filter:blur(12px); border-bottom:1px solid var(--line); box-shadow:0 4px 20px rgba(30,25,10,.06);}
   .nav-wrap{display:flex; align-items:center; justify-content:space-between; padding:16px 26px; max-width:1200px; margin:0 auto;}
-  .logo{display:flex; flex-direction:column; line-height:1;}
-  .logo img{height:42px; width:auto; display:block;}
-  .logo small{color:var(--muted-invert); font-size:.6rem; letter-spacing:3px; text-transform:uppercase; margin-top:6px; transition:color .3s ease;}
-  header.scrolled .logo small{color:var(--muted);}
+  .logo{display:flex; align-items:center;}
+  .logo img{height:50px; width:auto; display:block;}
   nav.main-nav{display:flex; gap:34px;}
   nav.main-nav a{font-size:.92rem; font-weight:500; color:var(--invert); opacity:.9; transition:opacity .2s, color .2s;}
   header.scrolled nav.main-nav a{color:var(--text); opacity:.78;}
@@ -120,12 +118,12 @@
   .hero-video-note{position:relative; z-index:4; margin-top:38px; display:inline-flex; align-items:center; gap:8px; font-size:.72rem; color:var(--muted-invert); border:1px dashed var(--line-dark); border-radius:999px; padding:7px 15px;}
 
   /* ---------- ODOMETER (rolling numbers) ---------- */
-  .odo{display:inline-flex; align-items:flex-start; line-height:1;}
+  .odo{display:inline-flex !important; align-items:flex-start; line-height:1;}
   .odo .oc{display:inline-block; height:1em; overflow:hidden; vertical-align:top;}
   .odo .os{display:flex; flex-direction:column; transform:translateY(0); transition:transform 1.6s cubic-bezier(.22,1,.36,1);}
   .odo.run .os{transform:translateY(var(--y));}
   .odo .os span{height:1em; display:flex; align-items:center;}
-  .odo .lit{display:inline-block; height:1em;}
+  .odo .lit{height:1em; display:flex; align-items:center;}
 
   /* ---------- SCENE REVEALS ---------- */
   .reveal{opacity:0; transform:translateY(30px); transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1);}
@@ -178,7 +176,7 @@
   /* ---------- ABOUT ---------- */
   .about-grid{display:grid; grid-template-columns:.95fr 1.05fr; gap:64px; align-items:center;}
   .about-visual{border-radius:var(--radius); aspect-ratio:4/5; border:1px solid var(--line); position:relative; overflow:hidden; box-shadow:var(--shadow); background:var(--ink);}
-  .about-visual video{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
+  .about-visual img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover;}
   .about-visual .cap{position:absolute; bottom:0; left:0; right:0; padding:18px 20px; font-size:.74rem; color:#fff; background:linear-gradient(to top, rgba(0,0,0,.7), transparent); z-index:2;}
   .about-body h2{font-size:clamp(1.9rem,3.2vw,2.6rem); font-weight:700; margin-bottom:18px;}
   .about-body p{color:var(--muted); font-size:1.04rem;}
@@ -200,16 +198,12 @@
   /* ---------- PROCESS (DARK BAND) ---------- */
   .follow-section{background:var(--cream);}
   .follow-grid{display:grid; grid-template-columns:.8fr 1.2fr; gap:70px; align-items:center;}
-  .phone-frame{width:250px; margin:0 auto; aspect-ratio:9/19; background:#0d0d0d; border-radius:38px; padding:12px; box-shadow:var(--shadow); position:relative; border:2px solid #000;}
-  .phone-notch{position:absolute; top:22px; left:50%; transform:translateX(-50%); width:76px; height:16px; background:#000; border-radius:10px; z-index:2;}
-  .phone-screen{background:#fff; width:100%; height:100%; border-radius:28px; overflow:hidden; display:flex; flex-direction:column;}
-  .ig-header{display:flex; align-items:center; gap:10px; padding:28px 14px 12px;}
-  .ig-avatar{width:34px; height:34px; border-radius:50%; background:linear-gradient(135deg,var(--gold-bright),var(--gold)); flex-shrink:0;}
-  .ig-handle{display:flex; flex-direction:column;}
-  .ig-handle strong{font-size:.76rem; font-weight:700; color:#1a1813;}
-  .ig-handle span{font-size:.62rem; color:#8a8578;}
-  .ig-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:2px; padding:0 2px;}
-  .ig-tile{aspect-ratio:1/1; overflow:hidden;}
+  .phone-frame{width:250px; margin:0 auto; aspect-ratio:723/1547; position:relative;}
+  .phone-body{position:absolute; inset:0; background:#1c1a16; border-radius:13% / 6%; z-index:0;}
+  .phone-screen{position:absolute; left:3.5%; right:4.3%; top:2%; bottom:2.4%; border-radius:9% / 4%; overflow:hidden; z-index:1;}
+  .phone-frame-img{position:absolute; inset:0; width:100%; height:100%; z-index:2; pointer-events:none;}
+  .ig-grid{display:grid; grid-template-columns:repeat(3,1fr); grid-template-rows:repeat(3,1fr); gap:2px; width:100%; height:100%;}
+  .ig-tile{overflow:hidden;}
   .ig-tile img{width:100%; height:100%; object-fit:cover; display:block;}
   .follow-body h2{font-size:clamp(1.9rem,3.2vw,2.5rem); font-weight:700; margin-bottom:16px;}
   .follow-body>p{color:var(--muted); font-size:1.02rem; max-width:480px;}
@@ -233,8 +227,8 @@
   .portfolio-scroller{display:flex; gap:20px; overflow-x:auto; scroll-snap-type:x mandatory; padding-bottom:16px; -webkit-overflow-scrolling:touch;}
   .portfolio-scroller::-webkit-scrollbar{height:6px;}
   .portfolio-scroller::-webkit-scrollbar-thumb{background:var(--line); border-radius:6px;}
-  .port-card{flex:0 0 84%; max-width:360px; scroll-snap-align:start; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:var(--shadow-sm);}
-  @media(min-width:760px){ .port-card{flex:0 0 31.5%;} }
+  .port-card{flex:0 0 92%; max-width:520px; scroll-snap-align:start; border-radius:var(--radius); overflow:hidden; border:1px solid var(--line); background:var(--card); box-shadow:var(--shadow-sm);}
+  @media(min-width:760px){ .port-card{flex:0 0 48%; max-width:560px;} }
   .port-info{padding:18px 20px;}
   .port-info h4{font-size:1rem; margin-bottom:4px;}
   .port-info span{font-size:.78rem; color:var(--muted);}
@@ -348,8 +342,7 @@
 <header id="siteHeader">
   <div class="nav-wrap">
     <a href="#home" class="logo">
-      <img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-web-280.png" alt="R&amp;M Pavers Pros">
-      <small>Tampa Bay Hardscapes</small>
+      <img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/logo-mark-web.png" alt="R&amp;M Pavers Pros">
     </a>
     <nav class="main-nav">
       <a href="#about">About</a><a href="#services">Services</a><a href="#portfolio">Portfolio</a><a href="#why">Why Us</a><a href="#testimonials">Reviews</a><a href="#contact">Contact</a>
@@ -397,10 +390,6 @@
           <div><span class="st odo" data-odo="100%"></span><small>Licensed &amp; Insured</small></div>
           <div><span class="st">Tampa</span><small>&amp; Surrounding Areas</small></div>
         </div>
-        <div class="hero-video-note reveal">
-          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="M22 8l-6 4 6 4V8z"/></svg>
-          Background video slot ready — send your video and it drops right in
-        </div>
       </div>
     </div>
   </section>
@@ -412,10 +401,18 @@
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-area1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-patio2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-muro1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-reparo1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick5.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick4.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-area1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-patio2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-muro1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-reparo1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick5.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
       </div>
     </div>
 
@@ -432,10 +429,18 @@
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-piscina2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-piscina1b.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick3.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-patio1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-piscina2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
         <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-piscina1b.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-corredor2.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
+        <div class="gb-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-brick3.jpg" alt="Recent R&amp;M Pavers Pros project"></div>
       </div>
     </div>
   </section>
@@ -443,9 +448,7 @@
   <section id="about">
     <div class="container about-grid">
       <div class="about-visual reveal">
-        <video autoplay muted loop playsinline>
-          <source src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/about-video.mp4" type="video/mp4">
-        </video>
+        <img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/about-wall.jpg" alt="R&amp;M Pavers Pros retaining wall project">
       </div>
       <div class="about-body reveal">
         <span class="eyebrow">About R&amp;M Pavers Pros</span>
@@ -484,12 +487,8 @@
     <div class="container follow-grid">
       <div class="reveal">
         <div class="phone-frame">
-          <div class="phone-notch"></div>
+          <div class="phone-body"></div>
           <div class="phone-screen">
-            <div class="ig-header">
-              <div class="ig-avatar"></div>
-              <div class="ig-handle"><strong>rmpaverspros</strong><span>Tampa Bay, FL</span></div>
-            </div>
             <div class="ig-grid">
               <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/driveway-after.jpg" alt=""></div>
               <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-turfpool.jpg" alt=""></div>
@@ -502,6 +501,7 @@
               <div class="ig-tile"><img src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/web/gb-back1.jpg" alt=""></div>
             </div>
           </div>
+          <img class="phone-frame-img" src="https://cdn.jsdelivr.net/gh/jesycalves11-commits/rm-pavers-pros-assets@main/images/phone-frame.png" alt="">
         </div>
       </div>
       <div class="follow-body reveal">
