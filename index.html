@@ -324,10 +324,6 @@
   .footer-col a:hover{color:var(--gold-bright);}
   .footer-bottom{display:flex; justify-content:space-between; flex-wrap:wrap; gap:10px; color:var(--muted-invert); font-size:.78rem;}
 
-  .sticky-cta{position:fixed; bottom:0; left:0; right:0; z-index:900; display:none; background:rgba(20,19,16,.94); backdrop-filter:blur(10px); border-top:1px solid var(--line-dark); padding:12px 16px; gap:10px;}
-  .sticky-cta a{flex:1;}
-  @media(max-width:900px){ .sticky-cta{display:flex;} body{padding-bottom:76px;} }
-
   @media(max-width:900px){
     nav.main-nav, .header-actions .call-pill{display:none;}
     .burger{display:flex;}
@@ -340,10 +336,9 @@
   }
   @media(max-width:480px){ .why-grid{grid-template-columns:1fr 1fr;} .hero-stats{gap:26px;} }
 
-  #backTop{position:fixed; bottom:92px; right:18px; width:46px; height:46px; border-radius:50%; background:var(--gold); color:#1a1305; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; z-index:950; border:none; cursor:pointer; box-shadow:0 8px 20px rgba(195,155,69,.4);}
+  #backTop{position:fixed; bottom:26px; right:18px; width:46px; height:46px; border-radius:50%; background:var(--gold); color:#1a1305; display:flex; align-items:center; justify-content:center; opacity:0; pointer-events:none; transition:opacity .25s, transform .25s; z-index:950; border:none; cursor:pointer; box-shadow:0 8px 20px rgba(195,155,69,.4);}
   #backTop.show{opacity:1; pointer-events:auto;}
   #backTop svg{width:20px; height:20px;}
-  @media(min-width:901px){ #backTop{bottom:26px;} }
 </style>
 </head>
 <body>
@@ -732,11 +727,6 @@
     <div class="footer-bottom"><span>&copy; <span id="year"></span> R&amp;M Pavers Pros. All rights reserved.</span><span>Developed by Jéssica Dorneles</span></div>
   </div>
 </footer>
-
-<div class="sticky-cta">
-  <a href="tel:+18137645987" class="btn btn-gold btn-sm">Call Now</a>
-  <a href="https://wa.me/18137645987" class="btn btn-outline btn-sm">WhatsApp</a>
-</div>
 
 <button id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg></button>
 
